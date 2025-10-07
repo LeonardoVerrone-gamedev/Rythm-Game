@@ -53,41 +53,6 @@ public class SongManager : MonoBehaviour
 
     private AudioSource mainAudioSource; //Mesmo da melodia
 
-    private void OnValidate()
-    {
-        ResetGroups();
-    }
-
-    private void ResetGroups()
-    {
-        // Para BandMemberInterface - apenas reseta os grupos mantendo as instâncias
-        if (bandMembers.Count >= 1) 
-            ResetBandMemberGroup(bandMembers[0], Group.Percussão);
-        if (bandMembers.Count >= 2) 
-            ResetBandMemberGroup(bandMembers[1], Group.Cordas);
-        if (bandMembers.Count >= 3) 
-            ResetBandMemberGroup(bandMembers[2], Group.Melodia);
-
-        // Para AudioSourceData - apenas reseta os grupos mantendo as instâncias
-        if (audioSources.Count >= 1) 
-            audioSources[0].musicGroup = Group.Percussão;
-        if (audioSources.Count >= 2) 
-            audioSources[1].musicGroup = Group.Cordas;
-        if (audioSources.Count >= 3) 
-            audioSources[2].musicGroup = Group.Melodia;
-    }
-
-    private void ResetBandMemberGroup(BandMemberInterface bandMember, Group group)
-    {
-        // Use reflection ou um método público se disponível
-        // Se BandMemberInterface tiver um método para resetar o grupo
-        var field = typeof(BandMemberInterface).GetField("_targetGroup", 
-            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-        if (field != null)
-        {
-            field.SetValue(bandMember, group);
-        }
-    }
 
     void Start()
     {
@@ -172,18 +137,18 @@ public class SongManager : MonoBehaviour
         {
             // Encontra o bandMember correspondente ao grupo
             BandMemberInterface bandMember = bandMembers.Find(bm => bm.targetGroup == audioSourceData.musicGroup);
-            
+
             if (bandMember != null && bandMember.bandMember != null)
             {
                 // Encontra o TrackGroup correspondente no SongData
                 TrackGroup trackGroup = selectedSong.MusicGroups.Find(tg => tg.groupName == audioSourceData.musicGroup);
-                
+
                 if (trackGroup != null)
                 {
                     // Encontra a variação do instrumento com o estilo do bandMember
-                    InstrumentVariation variation = trackGroup.instrumentVariations.Find(iv => 
+                    InstrumentVariation variation = trackGroup.instrumentVariations.Find(iv =>
                         iv.musicStyle == bandMember.bandMember.style);
-                    
+
                     if (variation != null && variation.audioTrack != null)
                     {
                         // Atribui o AudioClip ao AudioSource
@@ -217,7 +182,7 @@ public class SongManager : MonoBehaviour
 
         // Configura as waves baseadas nos band members
         SetWaves();
-        
+
         // Inicia a corrotina para carregar o MIDI
         StartCoroutine(ReadFromFile(selectedSong.midiResource.URI));
     }
@@ -270,4 +235,43 @@ public class SongManager : MonoBehaviour
     {
         return (double)Instance.mainAudioSource.timeSamples / Instance.mainAudioSource.clip.frequency;
     }
+
+
+    #region Inspector stuff
+    private void OnValidate()
+    {
+        ResetGroups();
+    }
+
+    private void ResetGroups()
+    {
+        // Para BandMemberInterface - apenas reseta os grupos mantendo as instâncias
+        if (bandMembers.Count >= 1)
+            ResetBandMemberGroup(bandMembers[0], Group.Percussão);
+        if (bandMembers.Count >= 2)
+            ResetBandMemberGroup(bandMembers[1], Group.Cordas);
+        if (bandMembers.Count >= 3)
+            ResetBandMemberGroup(bandMembers[2], Group.Melodia);
+
+        // Para AudioSourceData - apenas reseta os grupos mantendo as instâncias
+        if (audioSources.Count >= 1)
+            audioSources[0].musicGroup = Group.Percussão;
+        if (audioSources.Count >= 2)
+            audioSources[1].musicGroup = Group.Cordas;
+        if (audioSources.Count >= 3)
+            audioSources[2].musicGroup = Group.Melodia;
+    }
+
+    private void ResetBandMemberGroup(BandMemberInterface bandMember, Group group)
+    {
+        // Use reflection ou um método público se disponível
+        // Se BandMemberInterface tiver um método para resetar o grupo
+        var field = typeof(BandMemberInterface).GetField("_targetGroup",
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        if (field != null)
+        {
+            field.SetValue(bandMember, group);
+        }
+    }
+    #endregion
 }
