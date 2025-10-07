@@ -9,18 +9,21 @@ using System;
 
 public class SongManager : MonoBehaviour
 {
+    #region Song and gameplay vars
     public static SongManager Instance;
 
-    public SongData selectedSong;
+    [Header("Selected song stuff")]
 
+    public SongData selectedSong;
+    public static MidiFile midiFile;
+
+    [Header("Gameplay Stuff")]
     public Lane[] lanes;
     public float songDelayInSeconds;
     public double marginOfError; // in seconds
 
     public int inputDelayInMilliseconds;
 
-
-    public string fileLocation;
     public float noteTime;
     public float noteSpawnY;
     public float noteTapY;
@@ -31,8 +34,6 @@ public class SongManager : MonoBehaviour
             return noteTapY - (noteSpawnY - noteTapY);
         }
     }
-
-    public static MidiFile midiFile;
 
     [Header("Band Member stuff")]
     public List<BandMemberInterface> bandMembers = new List<BandMemberInterface>
@@ -53,6 +54,8 @@ public class SongManager : MonoBehaviour
 
     private AudioSource mainAudioSource; //Mesmo da melodia
 
+    #endregion
+
 
     void Start()
     {
@@ -72,7 +75,7 @@ public class SongManager : MonoBehaviour
         InitializeSong();
     }
 
-
+    #region MIDI Management and initialization
     private IEnumerator ReadFromFile(string targetURI)
     {
         Debug.Log($"Tentando carregar MIDI de: {targetURI}");
@@ -130,6 +133,9 @@ public class SongManager : MonoBehaviour
 
         Invoke(nameof(StartSong), songDelayInSeconds);
     }
+    #endregion
+
+    #region Gameplay start
 
     public void SetWaves()
     {
@@ -231,10 +237,16 @@ public class SongManager : MonoBehaviour
         Debug.Log("Todos os AudioSources parados");
     }
 
+    #endregion
+
+    #region Get Time, used in gameplay
+
     public static double GetAudioSourceTime()
     {
         return (double)Instance.mainAudioSource.timeSamples / Instance.mainAudioSource.clip.frequency;
     }
+
+    #endregion
 
 
     #region Inspector stuff
