@@ -9,3 +9,11 @@ public enum MusicStyle
     Pop,
     Mariachi
 }
+
+public enum Group
+{
+    None,
+    Percussão,
+    Melodia,
+    Cordas
+}

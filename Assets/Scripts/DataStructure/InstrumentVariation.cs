@@ -14,7 +14,7 @@ public class InstrumentVariation
 [System.Serializable]
 public class TrackGroup
 {
-    public string groupName;
+    public Group groupName;
 
     public List<InstrumentVariation> instrumentVariations = new List<InstrumentVariation>();
 }
