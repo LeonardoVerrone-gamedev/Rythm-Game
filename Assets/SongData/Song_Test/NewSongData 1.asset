@@ -13,9 +13,33 @@ MonoBehaviour:
   m_Name: NewSongData 1
   m_EditorClassIdentifier: 
   midiResource:
-    midiAsset: {fileID: 0}
-    resourcePath: error
-    path: 
-  songName: 
-  BPM: 0
-  MusicGroups: []
+    midiAsset: {fileID: 102900000, guid: f83a66440521c60468b1e81a059a5bda, type: 3}
+    resourcePath: we_made_a_chart_pog.mid
+    path: C:/Users/leosa/Rythm-Game/Assets/StreamingAssets\we_made_a_chart_pog.mid
+  songName: my song
+  BPM: 120
+  MusicGroups:
+  - groupName: 1
+    instrumentVariations:
+    - musicStyle: 2
+      audioTrack: {fileID: 0}
+    - musicStyle: 1
+      audioTrack: {fileID: 0}
+    - musicStyle: 3
+      audioTrack: {fileID: 0}
+  - groupName: 2
+    instrumentVariations:
+    - musicStyle: 1
+      audioTrack: {fileID: 0}
+    - musicStyle: 2
+      audioTrack: {fileID: 0}
+    - musicStyle: 3
+      audioTrack: {fileID: 0}
+  - groupName: 3
+    instrumentVariations:
+    - musicStyle: 1
+      audioTrack: {fileID: 0}
+    - musicStyle: 2
+      audioTrack: {fileID: 0}
+    - musicStyle: 3
+      audioTrack: {fileID: 0}

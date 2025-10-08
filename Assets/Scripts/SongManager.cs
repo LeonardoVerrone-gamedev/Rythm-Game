@@ -7,6 +7,8 @@ using System.IO;
 using UnityEngine.Networking;
 using System;
 
+using UnityEngine.UI;
+
 public class SongManager : MonoBehaviour
 {
     #region Song and gameplay vars
@@ -53,6 +55,10 @@ public class SongManager : MonoBehaviour
     };
 
     private AudioSource mainAudioSource; //Mesmo da melodia
+
+    [Header("DEBUG UI")]
+    [SerializeField] Text debugText;
+    [SerializeField] Text debugText2;
 
     #endregion
 
@@ -106,17 +112,21 @@ public class SongManager : MonoBehaviour
                 byte[] midiBytes = www.downloadHandler.data;
                 Debug.Log($"Tamanho do arquivo: {midiBytes.Length} bytes");
 
+                debugText.text = $"MIDI carregado com sucesso!, Tamanho do arquivo: {midiBytes.Length} bytes";
+
                 using (var stream = new MemoryStream(midiBytes))
                 {
                     try
                     {
                         midiFile = MidiFile.Read(stream);
                         Debug.Log($"MIDI parseado - Tracks: {midiFile.Chunks.Count}");
+                        debugText2.text = $"MIDI parseado - Tracks: {midiFile.Chunks.Count}";
                         GetDataFromMidi();
                     }
                     catch (Exception e)
                     {
                         Debug.LogError($"Erro ao parsear arquivo MIDI: {e.Message}");
+                        debugText.text = $"Erro ao parsear arquivo MIDI: {e.Message}";
                     }
                 }
             }
@@ -285,5 +295,36 @@ public class SongManager : MonoBehaviour
             field.SetValue(bandMember, group);
         }
     }
+    #endregion
+
+    #region GIZMOS
+
+    private void OnDrawGizmos()
+    {
+        Vector3 pos = transform.position;
+
+        if (midiFile != null)
+        {
+            var notes = midiFile.GetNotes();
+
+            // Desenha as informações do MIDI
+            Gizmos.color = Color.green;
+            Gizmos.DrawIcon(pos + Vector3.up * 2f, "d_AudioSource Gizmo", true);
+
+            // Usa Handles.Label que funciona em runtime
+            GUI.color = Color.green;
+            GUI.Label(new Rect(10, 10, 200, 100),
+                    $"MIDI Info:\nTracks: {midiFile.Chunks.Count}\nNotes: {notes.Count}");
+        }
+        else
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawIcon(pos + Vector3.up * 2f, "d_console.erroricon.sml", true);
+
+            GUI.color = Color.red;
+            GUI.Label(new Rect(10, 10, 200, 50), "MIDI: Não carregado");
+        }
+    }
+
     #endregion
 }
