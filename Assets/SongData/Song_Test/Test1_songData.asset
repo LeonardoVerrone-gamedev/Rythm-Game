@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Test1_songData
   m_EditorClassIdentifier: 
   midiResource:
-    midiAsset: {fileID: 102900000, guid: a1ca4ad5b974aff44a24027f34229b6d, type: 3}
-    resourcePath: TestSongMIDI1.mid
-    path: C:/Users/leosa/Rythm-Game/Assets/StreamingAssets\TestSongMIDI1.mid
+    midiAsset: {fileID: 102900000, guid: e19a142d0f2e1d0408148911d9f5d632, type: 3}
+    resourcePath: MelodyMIDITest1.mid
+    path: C:/Users/leosa/Rythm-Game/Assets/StreamingAssets\MelodyMIDITest1.mid
   songName: my song
   BPM: 120
   MusicGroups:

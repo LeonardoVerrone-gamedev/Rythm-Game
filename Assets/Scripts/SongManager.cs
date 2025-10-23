@@ -56,10 +56,6 @@ public class SongManager : MonoBehaviour
 
     private AudioSource mainAudioSource; //Mesmo da melodia
 
-    [Header("DEBUG UI")]
-    [SerializeField] Text debugText;
-    [SerializeField] Text debugText2;
-
     #endregion
 
 
@@ -112,21 +108,17 @@ public class SongManager : MonoBehaviour
                 byte[] midiBytes = www.downloadHandler.data;
                 Debug.Log($"Tamanho do arquivo: {midiBytes.Length} bytes");
 
-                debugText.text = $"MIDI carregado com sucesso!, Tamanho do arquivo: {midiBytes.Length} bytes";
-
                 using (var stream = new MemoryStream(midiBytes))
                 {
                     try
                     {
                         midiFile = MidiFile.Read(stream);
                         Debug.Log($"MIDI parseado - Tracks: {midiFile.Chunks.Count}");
-                        debugText2.text = $"MIDI parseado - Tracks: {midiFile.Chunks.Count}";
                         GetDataFromMidi();
                     }
                     catch (Exception e)
                     {
                         Debug.LogError($"Erro ao parsear arquivo MIDI: {e.Message}");
-                        debugText.text = $"Erro ao parsear arquivo MIDI: {e.Message}";
                     }
                 }
             }
