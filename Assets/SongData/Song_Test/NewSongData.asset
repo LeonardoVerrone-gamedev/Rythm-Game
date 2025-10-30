@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9788199b9dbad9748ab0a929e7adac10, type: 3}
+  m_Name: NewSongData
+  m_EditorClassIdentifier: 
+  midiResource:
+    midiAsset: {fileID: 102900000, guid: a1ca4ad5b974aff44a24027f34229b6d, type: 3}
+    resourcePath: TestSongMIDI1.mid
+    path: C:/Users/leosa/Rythm-Game/Assets/StreamingAssets\TestSongMIDI1.mid
+  songName: Pc song
+  BPM: 120
+  MusicGroups:
+  - groupName: 1
+    instrumentVariations:
+    - musicStyle: 1
+      audioTrack: {fileID: 8300000, guid: b4aa070fcc9c615469d136b896fde4de, type: 3}
+    - musicStyle: 2
+      audioTrack: {fileID: 8300000, guid: 67853dad986dbec49ae679d47d7ad8ff, type: 3}
+    - musicStyle: 3
+      audioTrack: {fileID: 8300000, guid: c169cee1ba7eb2845af33e0d73c7dda2, type: 3}
+  - groupName: 2
+    instrumentVariations:
+    - musicStyle: 1
+      audioTrack: {fileID: 8300000, guid: 99270b18a6804a443a37e5c1869800a4, type: 3}
+    - musicStyle: 2
+      audioTrack: {fileID: 8300000, guid: 6808041e7b540d145a25f6e8988b6bf8, type: 3}
+    - musicStyle: 3
+      audioTrack: {fileID: 8300000, guid: 6a053c0bb40e01c4a867c72cc170be1b, type: 3}
+  - groupName: 3
+    instrumentVariations:
+    - musicStyle: 3
+      audioTrack: {fileID: 8300000, guid: c765fe0c79d927d428ef3b09d07ce955, type: 3}
+    - musicStyle: 2
+      audioTrack: {fileID: 8300000, guid: db4f6a682832b954ea644d964b33e4ee, type: 3}
+    - musicStyle: 1
+      audioTrack: {fileID: 8300000, guid: eb23b11ae086af94d93ad2119840d61e, type: 3}

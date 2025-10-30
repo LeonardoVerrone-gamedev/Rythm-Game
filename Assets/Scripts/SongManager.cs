@@ -37,6 +37,8 @@ public class SongManager : MonoBehaviour
         }
     }
 
+    public List<SpawnPoint> spawnPoints;
+
     [Header("Band Member stuff")]
     public List<BandMemberInterface> bandMembers = new List<BandMemberInterface>
     {
@@ -148,6 +150,14 @@ public class SongManager : MonoBehaviour
 
             if (bandMember != null && bandMember.bandMember != null)
             {
+
+                SpawnPoint spawnPoint = spawnPoints.Find(sp => sp.group == audioSourceData.musicGroup);
+
+                if (spawnPoint != null)
+                {
+                    GameObject bandMemberOBJ = Instantiate(bandMember.bandMember.bandMemberPrefab, spawnPoint.transform.position, Quaternion.identity);
+                }
+                
                 // Encontra o TrackGroup correspondente no SongData
                 TrackGroup trackGroup = selectedSong.MusicGroups.Find(tg => tg.groupName == audioSourceData.musicGroup);
 

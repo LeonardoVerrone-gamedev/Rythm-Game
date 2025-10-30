@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   style: 1
   group: 1
+  bandMemberPrefab: {fileID: 4102174103933878569}

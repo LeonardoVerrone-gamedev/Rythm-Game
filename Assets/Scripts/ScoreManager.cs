@@ -10,6 +10,11 @@ public class ScoreManager : MonoBehaviour
     public AudioSource missSFX;
     public Text scoreText;
     static int comboScore;
+
+    public delegate void ScoreAction();
+    public static event ScoreAction OnMiss;
+    public static event ScoreAction OnHit;
+
     void Start()
     {
         Instance = this;
@@ -19,11 +24,13 @@ public class ScoreManager : MonoBehaviour
     {
         comboScore += 1;
         Instance.hitSFX.Play();
+        OnHit?.Invoke();
     }
     public static void Miss()
     {
         comboScore = 0;
         Instance.missSFX.Play();
+        OnMiss?.Invoke();
     }
     private void Update()
     {
