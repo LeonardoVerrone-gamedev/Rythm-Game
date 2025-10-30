@@ -19,6 +19,7 @@ public class BandMember : MonoBehaviour
 
     private void HandleMiss()
     {
+        if (animations == null) return;
         animations.PlayAnimation(CharacterAnimationsScript.AnimationParameters.OnWrong);
     }
 
