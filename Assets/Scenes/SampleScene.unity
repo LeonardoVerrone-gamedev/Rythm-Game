@@ -502,13 +502,13 @@ MonoBehaviour:
   - {fileID: 1966912102}
   bandMembers:
   - _targetGroup: 1
-    _bandMember: {fileID: 3550473670095310149, guid: d385207b05cd2dd4f9a68c3be6cd9dc0,
+    _bandMember: {fileID: 6410767981445385725, guid: b771d5d7a7f083842ad9747ac5ac5679,
       type: 3}
   - _targetGroup: 3
-    _bandMember: {fileID: 8411302304913461469, guid: 242f9cf7cd3f07443b7acc17ccbfca2d,
+    _bandMember: {fileID: 3802633024437655398, guid: af6a363fa2d89744c8244c5ca7220fd8,
       type: 3}
   - _targetGroup: 2
-    _bandMember: {fileID: 2080735995383299486, guid: 59c35709f7a319c4e8b7421db4331c2c,
+    _bandMember: {fileID: 1147534562075000810, guid: 3837e450325b44f4795a8656fe8c645d,
       type: 3}
   audioSources:
   - musicGroup: 1
