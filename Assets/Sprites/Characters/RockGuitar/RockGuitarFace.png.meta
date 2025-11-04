@@ -2,23 +2,34 @@ fileFormatVersion: 2
 guid: acedaf48d1d26264e97309bfd97840e2
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PopBateriaFace_15
-    21300002: PopBateriaFace_16
-    21300004: RockGuitarFace_0
-    21300006: RockGuitarFace_1
-    21300008: RockGuitarFace_2
-    21300010: RockGuitarFace_3
-    21300012: RockGuitarFace_4
-    21300014: RockGuitarFace_5
-    21300016: RockGuitarFace_6
-    21300018: RockGuitarFace_7
-    21300020: RockGuitarFace_8
-    21300022: RockGuitarFace_9
-    21300024: RockGuitarFace_10
-    21300026: RockGuitarFace_11
-    21300028: RockGuitarFace_12
-    21300030: RockGuitarFace_13
-    21300032: RockGuitarFace_14
+    21300000: PopBateriaFace_5
+    21300002: PopBateriaFace_6
+    21300004: PopBateriaFace_7
+    21300006: PopBateriaFace_8
+    21300008: PopBateriaFace_9
+    21300010: PopBateriaFace_10
+    21300012: PopBateriaFace_11
+    21300014: PopBateriaFace_12
+    21300016: PopBateriaFace_13
+    21300018: PopBateriaFace_14
+    21300020: PopBateriaFace_15
+    21300022: PopBateriaFace_16
+    21300024: PopBateriaFace_17
+    21300026: RockGuitarFace_0
+    21300028: RockGuitarFace_1
+    21300030: RockGuitarFace_2
+    21300032: RockGuitarFace_3
+    21300034: RockGuitarFace_4
+    21300036: RockGuitarFace_5
+    21300038: RockGuitarFace_6
+    21300040: RockGuitarFace_7
+    21300042: RockGuitarFace_8
+    21300044: RockGuitarFace_9
+    21300046: RockGuitarFace_10
+    21300048: RockGuitarFace_11
+    21300050: RockGuitarFace_12
+    21300052: RockGuitarFace_13
+    21300054: RockGuitarFace_14
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -94,9 +105,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 900
-        width: 800
-        height: 450
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,7 +115,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf0ce94f4266b0945b5c5b35188f106f
+      spriteID: dbbc0f5a816162848be20527abfcd1fb
       vertices: []
       indices: 
       edges: []
@@ -113,10 +124,10 @@ TextureImporter:
       name: RockGuitarFace_1
       rect:
         serializedVersion: 2
-        x: 800
-        y: 900
-        width: 800
-        height: 450
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,7 +135,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ba8fc44c3643af45a7690de6291bb9f
+      spriteID: 8629d37bec6ffeb43924d77f328ff2c3
       vertices: []
       indices: 
       edges: []
@@ -133,10 +144,10 @@ TextureImporter:
       name: RockGuitarFace_2
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 900
-        width: 800
-        height: 450
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,7 +155,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef54595d6f714da488196aabe5f1446f
+      spriteID: c966cf2ab6c96f34fb3a5a07ebf795fa
       vertices: []
       indices: 
       edges: []
@@ -153,10 +164,10 @@ TextureImporter:
       name: RockGuitarFace_3
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 900
-        width: 800
-        height: 450
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf88e66b2444ade4eb75312eee53116a
+      spriteID: 33f38fd6f44922a49a50d3809df88929
       vertices: []
       indices: 
       edges: []
@@ -173,10 +184,10 @@ TextureImporter:
       name: RockGuitarFace_4
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 900
-        width: 800
-        height: 450
+        x: 7680
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,7 +195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d87d62a2c5ec5d4f9207901fbb48063
+      spriteID: 69522dbc2fd862a409e7c96199988592
       vertices: []
       indices: 
       edges: []
@@ -194,9 +205,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 450
-        width: 800
-        height: 450
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,7 +215,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c80a557f61b4aea45aa206699dabfd9e
+      spriteID: c6b7a53320eb1ed449f29e71cd1c0b2b
       vertices: []
       indices: 
       edges: []
@@ -213,10 +224,10 @@ TextureImporter:
       name: RockGuitarFace_6
       rect:
         serializedVersion: 2
-        x: 800
-        y: 450
-        width: 800
-        height: 450
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,7 +235,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2546099dddda90c4aa6948adf3a9d5b8
+      spriteID: 810ea7dc8dbebd84bbb6df82702195d6
       vertices: []
       indices: 
       edges: []
@@ -233,10 +244,10 @@ TextureImporter:
       name: RockGuitarFace_7
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 450
-        width: 800
-        height: 450
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,7 +255,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ee99e264f3b13247822007ff7111e1c
+      spriteID: 279509b20726db2418f4df8572ba483d
       vertices: []
       indices: 
       edges: []
@@ -253,10 +264,10 @@ TextureImporter:
       name: RockGuitarFace_8
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 450
-        width: 800
-        height: 450
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,7 +275,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f009012f16975241b8b238de98304a4
+      spriteID: 6c076356a129e174aa8662ea92bdf4fd
       vertices: []
       indices: 
       edges: []
@@ -273,10 +284,10 @@ TextureImporter:
       name: RockGuitarFace_9
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 450
-        width: 800
-        height: 450
+        x: 7680
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,7 +295,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa8273e12451b894f8dcbe4d358b2b98
+      spriteID: 66835cccc1e5a3b49acea278d87d9a27
       vertices: []
       indices: 
       edges: []
@@ -295,8 +306,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 800
-        height: 450
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,7 +315,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10f7c09396fa7fa47bfb85fdbb849495
+      spriteID: 7f66069b58090a344b11162a467fc0f0
       vertices: []
       indices: 
       edges: []
@@ -313,10 +324,10 @@ TextureImporter:
       name: RockGuitarFace_11
       rect:
         serializedVersion: 2
-        x: 800
+        x: 1920
         y: 0
-        width: 800
-        height: 450
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,7 +335,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f6104e839d4bba46bc6c8a499d77118
+      spriteID: 17a2a253b8dd6784ab876752a590ca6a
       vertices: []
       indices: 
       edges: []
@@ -333,10 +344,10 @@ TextureImporter:
       name: RockGuitarFace_12
       rect:
         serializedVersion: 2
-        x: 1600
+        x: 3840
         y: 0
-        width: 800
-        height: 450
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,7 +355,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dee71715b5f8f1440b0fdbf8a450c848
+      spriteID: 6a3114b22ccf9c54dbeace7b588887b0
       vertices: []
       indices: 
       edges: []
@@ -353,10 +364,10 @@ TextureImporter:
       name: RockGuitarFace_13
       rect:
         serializedVersion: 2
-        x: 2400
+        x: 5760
         y: 0
-        width: 800
-        height: 450
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,7 +375,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8c7e136c6f9e12408bdcacbffa02b58
+      spriteID: a8dd187d5ec904c458256830022e4ed6
       vertices: []
       indices: 
       edges: []
@@ -373,10 +384,10 @@ TextureImporter:
       name: RockGuitarFace_14
       rect:
         serializedVersion: 2
-        x: 3200
+        x: 7680
         y: 0
-        width: 800
-        height: 450
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,7 +395,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b5b7bff3be6e4844b01adb74c7af489
+      spriteID: 35dca4f0bef1c4b448e2fd92fbb10876
       vertices: []
       indices: 
       edges: []

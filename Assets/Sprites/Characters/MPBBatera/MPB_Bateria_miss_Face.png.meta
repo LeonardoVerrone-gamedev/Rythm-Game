@@ -10,6 +10,14 @@ TextureImporter:
     21300010: PopBateriaFace_15
     21300012: PopBateriaFace_16
     21300014: PopBateriaFace_17
+    21300016: MPB_Bateria_miss_Face_0
+    21300018: MPB_Bateria_miss_Face_1
+    21300020: MPB_Bateria_miss_Face_2
+    21300022: MPB_Bateria_miss_Face_3
+    21300024: MPB_Bateria_miss_Face_4
+    21300026: MPB_Bateria_miss_Face_5
+    21300028: MPB_Bateria_miss_Face_6
+    21300030: MPB_Bateria_miss_Face_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -81,207 +89,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PopBateriaFace_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea1305d0ab6b69145b999b1856396730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PopBateriaFace_1
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcf2cc762b088f247a51222e9cfe0841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PopBateriaFace_2
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6185b8fcf2ec3874ca08afb945265ffc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PopBateriaFace_3
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a31a8da4c4ee2e0419c4ea1f16e3b6e8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PopBateriaFace_4
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: baa4ac1e4a3b2e1409bf3d4881ca5bf4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PopBateriaFace_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2160
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 890963fc40e1e8c45a227284f88e0b85
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PopBateriaFace_6
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 2160
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2421ee1382b82cc4aaa210156bb6c40a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PopBateriaFace_7
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 2160
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b007d63d079471f458c0a84c0ec67760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PopBateriaFace_8
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 2160
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77b2abe5630d720428bebd125ea34eee
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PopBateriaFace_9
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 2160
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e33dfe45adc601e44a58b88141cce680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PopBateriaFace_10
+      name: MPB_Bateria_miss_Face_0
       rect:
         serializedVersion: 2
         x: 0
@@ -295,13 +103,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce47437bd0944b245bd95a3ee5ab1526
+      spriteID: ef837d2589717c243867bb79bf8fcce6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PopBateriaFace_11
+      name: MPB_Bateria_miss_Face_1
       rect:
         serializedVersion: 2
         x: 1920
@@ -315,13 +123,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32043a3c00c7c164aafe7080d3368f8a
+      spriteID: 34c5f66cd068b494c81c7e138ae4cdf5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PopBateriaFace_12
+      name: MPB_Bateria_miss_Face_2
       rect:
         serializedVersion: 2
         x: 3840
@@ -335,13 +143,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f690e4131485cd84b898a6ab10c70fe7
+      spriteID: 9063f37f58f1c1a42a9cfde10d77dd66
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PopBateriaFace_13
+      name: MPB_Bateria_miss_Face_3
       rect:
         serializedVersion: 2
         x: 5760
@@ -355,13 +163,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3303e540b4f880d44be40c7585cf4ba3
+      spriteID: 0b7116c0e1f231645866ff2f66624e50
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PopBateriaFace_14
+      name: MPB_Bateria_miss_Face_4
       rect:
         serializedVersion: 2
         x: 7680
@@ -375,13 +183,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2539d0c61ec687449a6ab11aa6fd9fa
+      spriteID: 75513fa323c57234fb45c5bd32b0342c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PopBateriaFace_15
+      name: MPB_Bateria_miss_Face_5
       rect:
         serializedVersion: 2
         x: 0
@@ -395,13 +203,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c60dbdcc67e4a27478b912a0c3aa70f4
+      spriteID: c1ab8fd052ae38549ba07f56713cf8a6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PopBateriaFace_16
+      name: MPB_Bateria_miss_Face_6
       rect:
         serializedVersion: 2
         x: 1920
@@ -415,13 +223,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0450fbcfc607b4e4b994da99af5a2288
+      spriteID: 46ecf2aa7afbd52418c4e3800b14e4a4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PopBateriaFace_17
+      name: MPB_Bateria_miss_Face_7
       rect:
         serializedVersion: 2
         x: 3840
@@ -435,7 +243,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ba3ee371cc25534aab54b9056d3a185
+      spriteID: 76b9881efa01cff43bd2ab7836a56eb3
       vertices: []
       indices: 
       edges: []

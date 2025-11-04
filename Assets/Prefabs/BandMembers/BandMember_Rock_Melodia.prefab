@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8411302304913461469}
   - component: {fileID: 5896753370312581130}
   m_Layer: 0
-  m_Name: BandMember_RockCordas
+  m_Name: BandMember_Rock_Melodia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1970074015354326733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.25, y: 2.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 201668736454371436}
   m_Father: {fileID: 0}
@@ -164,7 +164,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300004, guid: acedaf48d1d26264e97309bfd97840e2, type: 3}
+  m_Sprite: {fileID: 21300026, guid: acedaf48d1d26264e97309bfd97840e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -263,7 +263,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300004, guid: 2d03c7c90ee6f1a4a8812635917aa46c, type: 3}
+  m_Sprite: {fileID: 21300026, guid: 2d03c7c90ee6f1a4a8812635917aa46c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
