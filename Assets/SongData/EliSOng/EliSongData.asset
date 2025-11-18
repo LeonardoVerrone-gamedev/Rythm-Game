@@ -13,9 +13,33 @@ MonoBehaviour:
   m_Name: EliSongData
   m_EditorClassIdentifier: 
   midiResource:
-    midiAsset: {fileID: 0}
-    resourcePath: error
-    path: 
-  songName: 
-  BPM: 0
-  MusicGroups: []
+    midiAsset: {fileID: 102900000, guid: 9ef44b4af455d444788f28a86db4bf07, type: 3}
+    resourcePath: Cordas main.mid
+    path: C:/Users/leosa/Rythm-Game/Assets/StreamingAssets\Cordas main.mid
+  songName: Eli Song
+  BPM: 120
+  MusicGroups:
+  - groupName: 1
+    instrumentVariations:
+    - musicStyle: 3
+      audioTrack: {fileID: 8300000, guid: 278bd84d52725b14f921a4312cfa2fd2, type: 3}
+    - musicStyle: 1
+      audioTrack: {fileID: 8300000, guid: 86694ae64fefccf47b5366edc947b1bd, type: 3}
+    - musicStyle: 2
+      audioTrack: {fileID: 8300000, guid: 06768117f54ea5c408816900ca3e5cc1, type: 3}
+  - groupName: 2
+    instrumentVariations:
+    - musicStyle: 2
+      audioTrack: {fileID: 8300000, guid: 7a9f841f0c3ff88469555a54daae5265, type: 3}
+    - musicStyle: 1
+      audioTrack: {fileID: 8300000, guid: 3d5fe6e0cfa2c6b45ada1c6930bfc409, type: 3}
+    - musicStyle: 3
+      audioTrack: {fileID: 8300000, guid: 549f6237ecd0da2489c02823f2f418f3, type: 3}
+  - groupName: 3
+    instrumentVariations:
+    - musicStyle: 3
+      audioTrack: {fileID: 8300000, guid: c5a93cc83b7d7e94ebfdefd97a8939e7, type: 3}
+    - musicStyle: 1
+      audioTrack: {fileID: 8300000, guid: cb66eb7568472aa499a217c8d01101ef, type: 3}
+    - musicStyle: 2
+      audioTrack: {fileID: 8300000, guid: 54b8ae7d3922527419f9341a03809c7b, type: 3}
