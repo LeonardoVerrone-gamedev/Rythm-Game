@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9788199b9dbad9748ab0a929e7adac10, type: 3}
+  m_Name: Oficina Data
+  m_EditorClassIdentifier: 
+  midiResource:
+    midiAsset: {fileID: 102900000, guid: e9647af7bd0bce244869cc57bb9e629e, type: 3}
+    resourcePath: MusicaOficinaCeoilMIDI.mid
+    path: C:/Users/leosa/Rythm-Game/Assets/StreamingAssets\MusicaOficinaCeoilMIDI.mid
+  songName: 
+  BPM: 98
+  MusicGroups:
+  - groupName: 1
+    instrumentVariations:
+    - musicStyle: 1
+      audioTrack: {fileID: 8300000, guid: 2821050ac2ecdfd4483d006905e89a51, type: 3}
+  - groupName: 2
+    instrumentVariations:
+    - musicStyle: 1
+      audioTrack: {fileID: 8300000, guid: d204d368c2807324793897d0a6d38e88, type: 3}
+  - groupName: 3
+    instrumentVariations:
+    - musicStyle: 1
+      audioTrack: {fileID: 8300000, guid: 3f71f33a664f9404da72b5add71dbc53, type: 3}
