@@ -6,8 +6,8 @@ using Melanchall.DryWetMidi.Interaction;
 using System.IO;
 using UnityEngine.Networking;
 using System;
-
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class SongManager : MonoBehaviour
 {
@@ -58,10 +58,21 @@ public class SongManager : MonoBehaviour
 
     private AudioSource mainAudioSource; //Mesmo da melodia
 
+    [Header("Events")]
+    public UnityEvent OnSongEnd; // Evento chamado quando a música termina
+    public UnityEvent OnSongStart; // Evento chamado quando a música começa
+
     #endregion
 
+    // Variáveis para controle do fim da música
+    private bool isSongPlaying = false;
+    private float longestClipLength = 0f;
+    private Coroutine songEndCheckCoroutine;
+    
+    // Lista para armazenar referências dos membros de banda instanciados
+    private List<GameObject> spawnedBandMembers = new List<GameObject>();
 
-    void Start()
+    public void StartGame()
     {
         AudioSourceData melodiaSource = audioSources.Find(asd => asd.musicGroup == Group.Melodia);
 
@@ -77,6 +88,8 @@ public class SongManager : MonoBehaviour
 
         Instance = this;
         InitializeSong();
+
+        OnSongStart.Invoke();
     }
 
     #region MIDI Management and initialization
@@ -143,6 +156,9 @@ public class SongManager : MonoBehaviour
 
     public void SetWaves()
     {
+        // Limpa membros de banda anteriores antes de instanciar novos
+        DestroyAllBandMembers();
+        
         foreach (AudioSourceData audioSourceData in audioSources)
         {
             // Encontra o bandMember correspondente ao grupo
@@ -150,12 +166,15 @@ public class SongManager : MonoBehaviour
 
             if (bandMember != null && bandMember.bandMember != null)
             {
-
                 SpawnPoint spawnPoint = spawnPoints.Find(sp => sp.group == audioSourceData.musicGroup);
 
                 if (spawnPoint != null)
                 {
                     GameObject bandMemberOBJ = Instantiate(bandMember.bandMember.bandMemberPrefab, spawnPoint.transform.position, Quaternion.identity);
+                    
+                    // Adiciona à lista de membros instanciados
+                    spawnedBandMembers.Add(bandMemberOBJ);
+                    Debug.Log($"Membro de banda instanciado para {audioSourceData.musicGroup}");
                 }
                 
                 // Encontra o TrackGroup correspondente no SongData
@@ -221,6 +240,9 @@ public class SongManager : MonoBehaviour
 
         double startTime = AudioSettings.dspTime + 0.1; // 100ms de delay para sincronização
 
+        // Calcula o comprimento da música mais longa
+        CalculateLongestClipLength();
+
         // Agenda todos os AudioSources dos grupos para tocar no mesmo tempo
         foreach (AudioSourceData audioSourceData in audioSources)
         {
@@ -231,11 +253,115 @@ public class SongManager : MonoBehaviour
             }
         }
 
+        // Inicia a verificação do fim da música
+        isSongPlaying = true;
+        if (songEndCheckCoroutine != null)
+            StopCoroutine(songEndCheckCoroutine);
+        songEndCheckCoroutine = StartCoroutine(CheckForSongEnd());
+
         Debug.Log($"Todos os AudioSources agendados para: {startTime}");
+    }
+
+    private void CalculateLongestClipLength()
+    {
+        longestClipLength = 0f;
+        foreach (AudioSourceData audioSourceData in audioSources)
+        {
+            if (audioSourceData.audioSource != null && 
+                audioSourceData.audioSource.clip != null && 
+                audioSourceData.audioSource.clip.length > longestClipLength)
+            {
+                longestClipLength = audioSourceData.audioSource.clip.length;
+            }
+        }
+        Debug.Log($"Duração da música mais longa: {longestClipLength} segundos");
+    }
+
+    private IEnumerator CheckForSongEnd()
+    {
+        // Aguarda um pequeno delay antes de começar a verificar
+        yield return new WaitForSeconds(1f);
+
+        while (isSongPlaying)
+        {
+            bool allAudioStopped = true;
+
+            // Verifica se algum AudioSource ainda está tocando
+            foreach (AudioSourceData audioSourceData in audioSources)
+            {
+                if (audioSourceData.audioSource != null && 
+                    audioSourceData.audioSource.isPlaying)
+                {
+                    allAudioStopped = false;
+                    break;
+                }
+            }
+
+            // Se todos os áudios pararam, a música terminou
+            if (allAudioStopped)
+            {
+                OnSongFinished();
+                yield break;
+            }
+
+            // Verificação alternativa: se o tempo passou da duração da música mais longa
+            if (mainAudioSource != null && mainAudioSource.clip != null)
+            {
+                // Adiciona uma margem de segurança de 0.5 segundos
+                if (mainAudioSource.time >= longestClipLength - 0.5f)
+                {
+                    OnSongFinished();
+                    yield break;
+                }
+            }
+
+            // Verifica a cada 0.5 segundos
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    private void OnSongFinished()
+    {
+        isSongPlaying = false;
+        Debug.Log("Música terminou!");
+
+        // Destroi todos os membros de banda
+        DestroyAllBandMembers();
+
+        // Invoca o evento
+        OnSongEnd?.Invoke();
+    }
+
+    // Método para destruir todos os membros de banda
+    private void DestroyAllBandMembers()
+    {
+        if (spawnedBandMembers.Count > 0)
+        {
+            Debug.Log($"Destruindo {spawnedBandMembers.Count} membros de banda...");
+            
+            foreach (GameObject bandMember in spawnedBandMembers)
+            {
+                if (bandMember != null)
+                {
+                    Destroy(bandMember);
+                }
+            }
+            
+            spawnedBandMembers.Clear();
+            Debug.Log("Todos os membros de banda foram destruídos");
+        }
     }
 
     public void StopSong()
     {
+        isSongPlaying = false;
+
+        // Para a corrotina de verificação
+        if (songEndCheckCoroutine != null)
+        {
+            StopCoroutine(songEndCheckCoroutine);
+            songEndCheckCoroutine = null;
+        }
 
         // Para todos os AudioSources dos grupos
         foreach (AudioSourceData audioSourceData in audioSources)
@@ -259,7 +385,6 @@ public class SongManager : MonoBehaviour
     }
 
     #endregion
-
 
     #region Inspector stuff
     private void OnValidate()

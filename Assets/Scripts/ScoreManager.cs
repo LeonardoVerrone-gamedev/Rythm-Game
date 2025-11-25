@@ -15,25 +15,32 @@ public class ScoreManager : MonoBehaviour
     public static event ScoreAction OnMiss;
     public static event ScoreAction OnHit;
 
-    void Start()
+    public void StartGame()
     {
         Instance = this;
         comboScore = 0;
     }
     public static void Hit()
     {
-        comboScore += 1;
+        comboScore += 500;
         Instance.hitSFX.Play();
         OnHit?.Invoke();
     }
     public static void Miss()
     {
-        comboScore = 0;
+        if((comboScore - 100) >= 0){
+            comboScore -= 100;
+        }
+        else
+        {
+            comboScore = 0;
+        }
+
         Instance.missSFX.Play();
         OnMiss?.Invoke();
     }
     private void Update()
     {
-        scoreText.text = comboScore.ToString();
+        scoreText.text = $"Pontuação: {comboScore.ToString()}";
     }
 }
